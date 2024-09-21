@@ -1,0 +1,6 @@
+//@forward는 무조건 index.scss에 추가해줘야함.
+@forward "./mixin/"; //폴더 자체로 가져오는거니깐 이렇게 쓰는거..?
+@forward 'function';
+@forward 'variable';
+
+

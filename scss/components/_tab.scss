@@ -1,0 +1,75 @@
+@use '../abstracts/' as *;
+
+@layer Components.Tab{
+    //기능 관련 코드
+    .tabs{
+        [data-tab]{
+            + label{
+                cursor: pointer;
+            }
+        }
+        .tab-content{
+            display:none;
+        }
+        @for $index from 1 through 5 {
+            &:has(:not([aria-hidden="true"])[data-tab="#{$index}"]:checked) [data-tab-content="#{$index}"] {
+                display: block;
+            }
+        
+        }
+        // &:has(:not([aria-hidden="true"])[data-tab="2"]:checked) [data-tab-content="2"] {
+        // display: block;
+        // }
+        // &:has(:not([aria-hidden="true"])[data-tab="3"]:checked) [data-tab-content="3"] {
+        // display: block;
+        // }
+        // &:has(:not([aria-hidden="true"])[data-tab="4"]:checked) [data-tab-content="4"] {
+        // display: block;
+        // }
+        // &:has(:not([aria-hidden="true"])[data-tab="5"]:checked) [data-tab-content="5"] {
+        // display: block;
+        // }
+        // &:has(:not([aria-hidden="true"])[data-tab="6"]:checked) [data-tab-content="6"] {
+        // display: block;
+        // }
+    }
+
+    //디자인 관련 코드
+    .tab-type1{
+        display:flex;
+        gap:rem(6);
+        li{
+            flex:1;
+        }
+        input{
+            @include ally-hidden;
+            &:focus-visible{
+                + label{
+                    color:$gray33;
+                    border-color:$yellow;
+                    outline-offset: rem(3);
+                    outline:rem(1) solid rgba($black, 0.5);
+                }
+            }
+            &:checked{
+                + label{
+                    color:$gray33;
+                    border-color:$yellow;
+                }
+            }
+        }
+        label{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            height:rem(44);
+            color:$graycc;
+            font-size:rem(16);
+            font-weight: 700;
+            border-bottom:rem(10) solid #f3f3f3;
+        }
+    }
+    .tab-content{
+        padding-top:rem(80);
+    }
+}

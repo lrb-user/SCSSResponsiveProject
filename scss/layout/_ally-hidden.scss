@@ -1,0 +1,8 @@
+//include를 쓰면 use를 써줘야한다.
+@use '../abstracts/' as *;
+
+@layer Layout.IR{
+    .ally-hidden{
+        @include ally-hidden;
+    }
+}

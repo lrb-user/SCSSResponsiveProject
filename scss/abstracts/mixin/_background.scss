@@ -1,0 +1,9 @@
+@use '../variable' as *;
+
+@mixin background($filename, $cordinate:null, $bgcolor:null, $bgsize:contain) {
+    // background: url(../images/파일명) no-repeat 좌표 배경색;
+    // background-size: 배경크기 -> 슬래시(/) 때문에 배경 크기는 따로 관리.
+    background: url(#{$imgurl}#{$filename}) no-repeat $cordinate $bgcolor;
+    background-size: $bgsize;
+}
+

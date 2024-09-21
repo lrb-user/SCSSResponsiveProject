@@ -1,0 +1,8 @@
+//리액트와 같은 개념. 색깔 변수 쓰고 싶으면 리액트처럼 가져와야됨.
+// @use '../abstracts/variable' as *;
+// @use '../abstracts/function' as *;
+// @use '../mixxin' as *;
+@forward "./login"; //로그인
+@forward "./kids"; //소년소녀부
+
+
