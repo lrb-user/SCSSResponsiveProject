@@ -8,9 +8,9 @@
         font-size: 62.5%;
         @include mobile{
             //디자인 시안이 720이라 나누기 2한값.
-            // font-size:31.25%;
-            // $baseSize : calc(62.5% / 2);
-            // font-size: $baseSize;
+            font-size:31.25%;
+            $baseSize : calc(62.5% / 2);
+            font-size: $baseSize;
         }
     }
     body{
